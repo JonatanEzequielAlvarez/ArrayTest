@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+</head>
+
+<body>
+
+    <main>
+        <section>
+            <label for="">Nombre</label>
+            <input type="text" name="" id="txtName">
+            <label for="">Apellido</label>
+            <input type="text" name="" id="txtSurname">
+            <label for="">Tel.</label>
+            <input type="tel" name="" id="txtTel">
+
+            <button id="btnSend" onclick="enviar()">Enviar</button>
+        </section>
+
+    </main>
+
+
+    <script>
+
+        function enviar() {
+            let txtName = document.getElementById("txtName").value
+            let txtSurname = document.getElementById("txtSurname").value
+            let txtTel = document.getElementById("txtTel").value
+            let arrayText = []
+            arrayText.push(txtName, txtSurname, txtTel)
+            console.log(arrayText)
+        }
+    </script>
+
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-around;
+            align-items: baseline;
+        }
+
+        section {
+            display: flex;
+            justify-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            justify-content: flex-end;
+        }
+
+        button {
+            margin: 10px;
+        }
+    </style>
+
+</body>
+
+</html>
